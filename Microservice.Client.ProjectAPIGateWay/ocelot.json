@@ -1,0 +1,151 @@
+{
+  "Routes": [
+    // Auth-Service API,Downstream API & Upstream API
+    {
+      "DownstreamPathTemplate": "/auth/register",
+      "DownstreamScheme": "http",
+      "UseServiceDiscovery": true,
+      "ServiceName": "AuthAPI",
+      "UpstreamPathTemplate": "/auth/register",
+      "UpstreamHttpMethod": [ "POST" ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/auth/login",
+      "DownstreamScheme": "http",
+      "UseServiceDiscovery": true,
+      "ServiceName": "AuthAPI",
+      "UpstreamPathTemplate": "/auth/login",
+      "UpstreamHttpMethod": [ "POST" ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/auth/admin-register",
+      "DownstreamScheme": "http",
+      "UseServiceDiscovery": true,
+      "ServiceName": "AuthAPI",
+      "UpstreamPathTemplate": "/auth/admin-register",
+      "UpstreamHttpMethod": [ "POST" ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    },
+    // ProductAPI,Downstream API & Upstream API
+    {
+      "DownstreamPathTemplate": "/product/add-product",
+      "DownstreamScheme": "http",
+      "UseServiceDiscovery": true,
+      "ServiceName": "AuthAPI",
+      "UpstreamPathTemplate": "/product/add-product",
+      "UpstreamHttpMethod": [ "POST" ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/product/update-product/{productId}",
+      "DownstreamScheme": "http",
+      "UseServiceDiscovery": true,
+      "ServiceName": "ProductAPI",
+      "UpstreamPathTemplate": "/product/update-product/{productId}",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/product/delete-product/{guid}",
+      "DownstreamScheme": "http",
+      "UseServiceDiscovery": true,
+      "ServiceName": "ProductAPI",
+      "UpstreamPathTemplate": "/product/delete-product/{guid}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    },
+    // CartAPI && Downstream API
+    {
+      "DownstreamPathTemplate": "/api/cart/{id}",
+      "DownstreamScheme": "http",
+      "UseServiceDiscovery": true,
+      "ServiceName": "ProductAPI",
+      "UpstreamPathTemplate": "/api/cart/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/cart",
+      "DownstreamScheme": "http",
+      "UseServiceDiscovery": true,
+      "ServiceName": "CartAPI",
+      "UpstreamPathTemplate": "/api/cart",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    },
+    //CartAPI,Downstream API & Upstream API
+    {
+      "DownstreamPathTemplate": "/cart/add-cart",
+      "DownstreamScheme": "http",
+      "UseServiceDiscovery": true,
+      "ServiceName": "CartAPI",
+      "UpstreamPathTemplate": "/cart/add-cart",
+      "UpstreamHttpMethod": [ "POST" ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/cart/get-cart-all-user",
+      "DownstreamScheme": "http",
+      "UseServiceDiscovery": true,
+      "ServiceName": "CartAPI",
+      "UpstreamPathTemplate": "/cart/get-cart-all-user",
+      "UpstreamHttpMethod": [ "GET" ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/cart/get-cart-user",
+      "DownstreamScheme": "http",
+      "UseServiceDiscovery": true,
+      "ServiceName": "CartAPI",
+      "UpstreamPathTemplate": "/cart/get-cart-user",
+      "UpstreamHttpMethod": [ "GET" ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    },
+    //OrderAPI Downstream API & Upstream API
+    {
+      "DownstreamPathTemplate": "/order/item-order",
+      "DownstreamScheme": "http",
+      "UseServiceDiscovery": true,
+      "ServiceName": "OrderAPI",
+      "UpstreamPathTemplate": "/order/item-order",
+      "UpstreamHttpMethod": [ "POST" ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "RequestIdKey": "OcRequestId",
+    "DownstreamScheme": "http",
+    "UseServiceDiscovery": true,
+    "ServiceDiscoveryProvider": {
+      "Host": "127.0.0.1",
+      "Port": 8761,
+      "Type": "Eureka"
+    }
+  }
+}

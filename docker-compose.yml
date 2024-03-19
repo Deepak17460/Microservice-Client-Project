@@ -1,0 +1,73 @@
+version: '3.4'
+
+services:
+  microservice.client.projectauth:
+    build:
+      context: .
+      dockerfile: Microservice.Client.ProjectAuth/Dockerfile
+    image: dpcode72/authserviceapi:1.0
+    container_name: authservice
+    ports:
+      - "8001:80"
+    #network_mode: host
+
+  microservice.client.projectproduct:
+    build:
+      context: .
+      dockerfile: Microservice.Client.ProjectProduct/Dockerfile
+    image: dpcode72/productserviceapi:2.0
+    container_name: productservice
+    ports:
+      - "8002:80"
+    #network_mode: host
+
+  microservice.client.projectcart:
+    build:
+      context: .
+      dockerfile: Microservice.Client.ProjectCart/Dockerfile
+    image: dpcode72/cartserviceapi:3.0
+    container_name: cartservice
+    ports:
+      - "8004:80"
+    #network_mode: host
+
+  microservice.client.projectinventory:
+    build:
+      context: .
+      dockerfile: Microservice.Client.ProjectInventory/Dockerfile
+    image: dpcode72/inventoryserviceapi:4.0
+    container_name: inventoryservice
+    ports:
+      - "8003:80"
+   # network_mode: host
+
+  microservice.client.projectorder:
+    build:
+      context: .
+      dockerfile: Microservice.Client.ProjectOrder/Dockerfile
+    image: dpcode72/orderserviceapi:5.0
+    container_name: orderservice
+    ports:
+      - "8005:80"
+    #network_mode: host
+  microservice.client.projectapigateway:
+    build:
+      context: .
+      dockerfile: Microservice.Client.ProjectAPIGateWay/Dockerfile
+    image: dpcode72/apigateway:6.0
+    container_name: apigateway
+    ports:
+      - "8000:80"
+   # network_mode: host
+  eureka-server:
+    image: steeltoeoss/eureka-server
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672" 
+      - "9000:15672" 
