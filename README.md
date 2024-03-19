@@ -22,7 +22,14 @@ You can find the Docker images for this project on Docker Hub:
 
 [dpcode72/microservice_client_project](https://hub.docker.com/repository/docker/dpcode72/microservice_client_project/general)
 
-You can pull the Docker images using the following command:
+### You can pull the Docker images using the following command
+1-> docker pull dpcode72/microservice_client_project:1.0
+2-> docker pull dpcode72/microservice_client_project:2.0
+3-> docker pull dpcode72/microservice_client_project:3.0
+4-> docker pull dpcode72/microservice_client_project:4.0
+5-> docker pull dpcode72/microservice_client_project:5.0
+6-> docker pull dpcode72/microservice_client_project:6.0
+
 
 <img width="957" alt="image" src="https://github.com/Deepak17460/Microservice-Client-Project/assets/99780500/1505139c-9398-4251-9371-5c48fa08a64c">
 
