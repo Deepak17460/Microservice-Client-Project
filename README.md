@@ -40,5 +40,20 @@ You can find the Docker images for this project on Docker Hub:
 
 <img width="953" alt="image" src="https://github.com/Deepak17460/Microservice-Client-Project/assets/99780500/8a9898ae-2a37-4bd1-a019-e9c2b90175b4">
 
+### Once you will pull image using above commands then you can run images on CLI using below commands
+
+- docker run -p <wish-port>:80 -d(if not wish to see logs) <name of image which is pulled>
+## And so on.............
+
+### After running above command on CLI(Commnad-Line Interface) as you can aspect to see the logs of images below
+
+<img width="951" alt="image" src="https://github.com/Deepak17460/Microservice-Client-Project/assets/99780500/f335b492-3c3c-47d7-987c-17424788db09">
+
+
+### After running above command you can see SWAGGER UI on Browser by writing http://localhost(Host Machine IP):<wish port>//<service route//upstream url
+
+
+<img width="949" alt="image" src="https://github.com/Deepak17460/Microservice-Client-Project/assets/99780500/0003edb3-9473-4541-b871-f9db879f2c01">
+
 
 
