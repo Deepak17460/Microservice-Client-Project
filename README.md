@@ -36,4 +36,9 @@ You can find the Docker images for this project on Docker Hub:
 
 <img width="957" alt="image" src="https://github.com/Deepak17460/Microservice-Client-Project/assets/99780500/1505139c-9398-4251-9371-5c48fa08a64c">
 
+### All Service are Registered on EUREKA SERVER As YOU CAN SEE BELOW IMAGE
+
+<img width="953" alt="image" src="https://github.com/Deepak17460/Microservice-Client-Project/assets/99780500/8a9898ae-2a37-4bd1-a019-e9c2b90175b4">
+
+
 
