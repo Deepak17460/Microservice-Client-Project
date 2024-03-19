@@ -15,6 +15,8 @@ The project showcases the implementation of a microservices architecture with bi
 - RabbitMQ: For asynchronous messaging between microservices.
 - Docker Compose: For defining and running multi-container Docker applications.
 - SQL Server: For data storage and retrieval.
+- SonarCloud, AWS & SonarQUbe: To continuos code anaysis
+-JWT TOKE:User Authentication with Token
 
 ## Docker Hub Repository
 
@@ -29,6 +31,18 @@ You can find the Docker images for this project on Docker Hub:
 - docker pull dpcode72/microservice_client_project:4.0
 -docker pull dpcode72/microservice_client_project:5.0
 -docker pull dpcode72/microservice_client_project:6.0
+
+### Build CICD PIPELINE on GITLAB for this Microservices
+
+### Gitlab Hub Respository
+
+[dpcode72/microservice_client_project](https://gitlab.com/deepak-kumar1/Microservice-Client-Project)
+
+<img width="948" alt="image" src="https://github.com/Deepak17460/Microservice-Client-Project/assets/99780500/093ec9cc-194e-4a4f-8de7-16539810f55c">
+
+##CICD PIPELINE as you can see in below image
+
+<img width="943" alt="image" src="https://github.com/Deepak17460/Microservice-Client-Project/assets/99780500/d4356c0c-be8e-42e4-8497-2991a01d30a6">
 
 
 
