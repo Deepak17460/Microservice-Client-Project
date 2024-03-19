@@ -40,7 +40,7 @@ You can find the Docker images for this project on Docker Hub:
 
 <img width="948" alt="image" src="https://github.com/Deepak17460/Microservice-Client-Project/assets/99780500/093ec9cc-194e-4a4f-8de7-16539810f55c">
 
-##CICD PIPELINE as you can see in below image
+### CICD PIPELINE as you can see in below image
 
 <img width="943" alt="image" src="https://github.com/Deepak17460/Microservice-Client-Project/assets/99780500/d4356c0c-be8e-42e4-8497-2991a01d30a6">
 
